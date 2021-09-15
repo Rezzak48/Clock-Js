@@ -1,7 +1,7 @@
 .clock {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .clock-face {
@@ -12,7 +12,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
+  position: relative;
+  color: #ffffff;
+  background: hsla(0, 0%, 21%, 0.425);
+  box-shadow: 0 0 .5rem #fff, 0 0 .5rem #fff, 0 0 1rem #fff, 0 0 2rem #b8c4c2,
+    0 0 3rem #b8c4c2, 0 0 4rem #b8c4c2, 0 0 5rem #b8c4c2, 0 0 7rem #b8c4c2;
+}
+
+@media (min-width: 900px) {
+  .clock-face {
+    width: 50rem;
+    height: 50rem;
+  }
 }
 
 .hand {
@@ -22,9 +33,18 @@
   right: 50%;
   position: absolute;
   transform-origin: 100%;
+  transition: all 0.3s;
   transform: rotate(90deg);
 }
 
 .hand-seconds {
-    
+  background-color: var(--color-lighter);
+}
+
+.hand-mintues {
+  background-color: var(--color-light);
+}
+
+.hand-hours {
+  background-color: var(--color-dark);
 }
