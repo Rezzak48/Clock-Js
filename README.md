@@ -30,21 +30,35 @@ Users should be able to:
 
 ### Links
 
-<!-- - Live Site URL: [Live Site URL:](linkHere)
-- Solution URL: [Solution URL:](linkHere) -->
+- Live Site URL: [Live Site URL:](https://errazakallah-clock-js.netlify.app/)
 
 ## My process
- - created 
 
+==> HTML :
+Created circle with with classes [clock => clock face => hand * 3 + hand for each task]
+
+==> CSS :
+Styled the circle and the hands to make them inside the clock
+applied transform : rotate (deg) !! the place of transform-origin by default is 50% of the x axis
+applied transform-origin : 100%
+applied transform : rotate (90deg) to make it looks nice and at 00:00 by default
+applied transition : all 0.4s + transition-timing-function : to something make it looks nice
+
+==> Js
+created setDates() + setInterval(function, time in milliseconds) for this function
+setDates => get the date => get seconds
+now we have seconds! what we should do to make them show up on screen! => turn them to degrees :)
+secondsDegrees => (( seconds / 60) \* 360) + the offset which is 90°
+select the second-hand => .style.transform = `rotate (#{secondsDegrees})`
 
 ### Built with
 
 <!-- Info -->
-<!-- - Semantic HTML5 markup
+
+- Mobile-first workflow
+- Semantic HTML5 markup
 - CSS custom properties
 - Flex box
-- Desktop-first workflow
--->
 
 ### What I learned
 
